@@ -1,0 +1,29 @@
+.container{
+    padding: 20px;
+    border-radius: 10px;
+    background-color: cadetblue;
+}
+mat-grid-list{
+    width: 400px;
+}
+div{
+    width: 400px;
+    margin: 0 auto;
+}
+.container{
+    margin-top: 50px;
+}
+input{
+    width: 98%;
+    height: 80px;
+    border-radius: 10px;
+}
+
+button{
+    width: 100%;
+}
+.field{
+    border: 2px solid black;
+    height: 98%;
+    background-color: white;
+}

@@ -1,0 +1,29 @@
+
+<!-- <mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+        {{tile.text}}
+    </mat-grid-tile>
+</mat-grid-list>
+
+mat-strocked-button -->
+<div class="container">
+    <mat-grid-list cols="4" rowHeight="64px">
+        <mat-grid-tile 
+        *ngFor="let btn of btns" 
+        [colspan]="btn.cols" 
+        [rowspan]="btn.rows" 
+        >
+            <div class="field" *ngIf="btn.type === 'history'">{{this.calcHistory}}</div>
+            <div class="field" *ngIf="btn.type === 'field'">{{this.total}}</div>
+            <button
+                [style.background]="btn.color"
+                [style.color]="btn.fontColor"
+                [style.height]="btn.height"
+                mat-flat-button
+                *ngIf="btn.type === 'button'"
+                (click)="eventClick(btn.click, btn.text)">
+                {{btn.text}}
+            </button>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
